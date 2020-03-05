@@ -1,0 +1,9 @@
+E:\Dev\schoolProject\SQLSimplification\SQL Testing\bin\Debug\SQL Testing.exe.config
+E:\Dev\schoolProject\SQLSimplification\SQL Testing\bin\Debug\SQL Testing.exe
+E:\Dev\schoolProject\SQLSimplification\SQL Testing\bin\Debug\SQL Testing.pdb
+E:\Dev\schoolProject\SQLSimplification\SQL Testing\bin\Debug\SQLSimplification.dll
+E:\Dev\schoolProject\SQLSimplification\SQL Testing\bin\Debug\SQLSimplification.pdb
+E:\Dev\schoolProject\SQLSimplification\SQL Testing\obj\Debug\SQL Testing.csprojAssemblyReference.cache
+E:\Dev\schoolProject\SQLSimplification\SQL Testing\obj\Debug\SQL Testing.csproj.CopyComplete
+E:\Dev\schoolProject\SQLSimplification\SQL Testing\obj\Debug\SQL Testing.exe
+E:\Dev\schoolProject\SQLSimplification\SQL Testing\obj\Debug\SQL Testing.pdb

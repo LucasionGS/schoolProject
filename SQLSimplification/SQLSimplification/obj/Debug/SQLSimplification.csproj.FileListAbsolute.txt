@@ -1,0 +1,5 @@
+E:\Dev\schoolProject\SQLSimplification\SQLSimplification\obj\Debug\SQLSimplification.csprojAssemblyReference.cache
+E:\Dev\schoolProject\SQLSimplification\SQLSimplification\bin\Debug\SQLSimplification.dll
+E:\Dev\schoolProject\SQLSimplification\SQLSimplification\bin\Debug\SQLSimplification.pdb
+E:\Dev\schoolProject\SQLSimplification\SQLSimplification\obj\Debug\SQLSimplification.dll
+E:\Dev\schoolProject\SQLSimplification\SQLSimplification\obj\Debug\SQLSimplification.pdb
