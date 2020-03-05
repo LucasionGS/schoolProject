@@ -1,0 +1,11 @@
+C:\Users\Lucas\source\repos\schoolProject\HexToDecimal\HexToDecimal\bin\Debug\netcoreapp3.0\HexToDecimal.exe
+C:\Users\Lucas\source\repos\schoolProject\HexToDecimal\HexToDecimal\bin\Debug\netcoreapp3.0\HexToDecimal.deps.json
+C:\Users\Lucas\source\repos\schoolProject\HexToDecimal\HexToDecimal\bin\Debug\netcoreapp3.0\HexToDecimal.runtimeconfig.json
+C:\Users\Lucas\source\repos\schoolProject\HexToDecimal\HexToDecimal\bin\Debug\netcoreapp3.0\HexToDecimal.runtimeconfig.dev.json
+C:\Users\Lucas\source\repos\schoolProject\HexToDecimal\HexToDecimal\bin\Debug\netcoreapp3.0\HexToDecimal.dll
+C:\Users\Lucas\source\repos\schoolProject\HexToDecimal\HexToDecimal\bin\Debug\netcoreapp3.0\HexToDecimal.pdb
+C:\Users\Lucas\source\repos\schoolProject\HexToDecimal\HexToDecimal\obj\Debug\netcoreapp3.0\HexToDecimal.csprojAssemblyReference.cache
+C:\Users\Lucas\source\repos\schoolProject\HexToDecimal\HexToDecimal\obj\Debug\netcoreapp3.0\HexToDecimal.AssemblyInfoInputs.cache
+C:\Users\Lucas\source\repos\schoolProject\HexToDecimal\HexToDecimal\obj\Debug\netcoreapp3.0\HexToDecimal.AssemblyInfo.cs
+C:\Users\Lucas\source\repos\schoolProject\HexToDecimal\HexToDecimal\obj\Debug\netcoreapp3.0\HexToDecimal.dll
+C:\Users\Lucas\source\repos\schoolProject\HexToDecimal\HexToDecimal\obj\Debug\netcoreapp3.0\HexToDecimal.pdb

@@ -1,0 +1,6 @@
+C:\Users\Lucas\source\repos\schoolProject\SQL Experimentation\SQL Experimentation\bin\Debug\SQL Experimentation.exe.config
+C:\Users\Lucas\source\repos\schoolProject\SQL Experimentation\SQL Experimentation\bin\Debug\SQL Experimentation.exe
+C:\Users\Lucas\source\repos\schoolProject\SQL Experimentation\SQL Experimentation\bin\Debug\SQL Experimentation.pdb
+C:\Users\Lucas\source\repos\schoolProject\SQL Experimentation\SQL Experimentation\obj\Debug\SQL Experimentation.csprojAssemblyReference.cache
+C:\Users\Lucas\source\repos\schoolProject\SQL Experimentation\SQL Experimentation\obj\Debug\SQL Experimentation.exe
+C:\Users\Lucas\source\repos\schoolProject\SQL Experimentation\SQL Experimentation\obj\Debug\SQL Experimentation.pdb

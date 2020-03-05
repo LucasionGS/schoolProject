@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.0": {
+      "NumericConverter/1.0.0": {
+        "runtime": {
+          "NumericConverter.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "NumericConverter/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

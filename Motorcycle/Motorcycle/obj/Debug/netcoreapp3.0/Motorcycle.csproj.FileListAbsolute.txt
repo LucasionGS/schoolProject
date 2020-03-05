@@ -1,0 +1,11 @@
+C:\Users\Lucas\source\repos\schoolProject\Motorcycle\Motorcycle\bin\Debug\netcoreapp3.0\Motorcycle.exe
+C:\Users\Lucas\source\repos\schoolProject\Motorcycle\Motorcycle\bin\Debug\netcoreapp3.0\Motorcycle.deps.json
+C:\Users\Lucas\source\repos\schoolProject\Motorcycle\Motorcycle\bin\Debug\netcoreapp3.0\Motorcycle.runtimeconfig.json
+C:\Users\Lucas\source\repos\schoolProject\Motorcycle\Motorcycle\bin\Debug\netcoreapp3.0\Motorcycle.runtimeconfig.dev.json
+C:\Users\Lucas\source\repos\schoolProject\Motorcycle\Motorcycle\bin\Debug\netcoreapp3.0\Motorcycle.dll
+C:\Users\Lucas\source\repos\schoolProject\Motorcycle\Motorcycle\bin\Debug\netcoreapp3.0\Motorcycle.pdb
+C:\Users\Lucas\source\repos\schoolProject\Motorcycle\Motorcycle\obj\Debug\netcoreapp3.0\Motorcycle.csprojAssemblyReference.cache
+C:\Users\Lucas\source\repos\schoolProject\Motorcycle\Motorcycle\obj\Debug\netcoreapp3.0\Motorcycle.AssemblyInfoInputs.cache
+C:\Users\Lucas\source\repos\schoolProject\Motorcycle\Motorcycle\obj\Debug\netcoreapp3.0\Motorcycle.AssemblyInfo.cs
+C:\Users\Lucas\source\repos\schoolProject\Motorcycle\Motorcycle\obj\Debug\netcoreapp3.0\Motorcycle.dll
+C:\Users\Lucas\source\repos\schoolProject\Motorcycle\Motorcycle\obj\Debug\netcoreapp3.0\Motorcycle.pdb

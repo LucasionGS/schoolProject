@@ -1,0 +1,11 @@
+C:\Users\Lucas\source\repos\schoolProject\doing7Dot1To7Dot5\doing7Dot1To7Dot5\bin\Debug\netcoreapp3.0\doing7Dot1To7Dot5.exe
+C:\Users\Lucas\source\repos\schoolProject\doing7Dot1To7Dot5\doing7Dot1To7Dot5\bin\Debug\netcoreapp3.0\doing7Dot1To7Dot5.deps.json
+C:\Users\Lucas\source\repos\schoolProject\doing7Dot1To7Dot5\doing7Dot1To7Dot5\bin\Debug\netcoreapp3.0\doing7Dot1To7Dot5.runtimeconfig.json
+C:\Users\Lucas\source\repos\schoolProject\doing7Dot1To7Dot5\doing7Dot1To7Dot5\bin\Debug\netcoreapp3.0\doing7Dot1To7Dot5.runtimeconfig.dev.json
+C:\Users\Lucas\source\repos\schoolProject\doing7Dot1To7Dot5\doing7Dot1To7Dot5\bin\Debug\netcoreapp3.0\doing7Dot1To7Dot5.dll
+C:\Users\Lucas\source\repos\schoolProject\doing7Dot1To7Dot5\doing7Dot1To7Dot5\bin\Debug\netcoreapp3.0\doing7Dot1To7Dot5.pdb
+C:\Users\Lucas\source\repos\schoolProject\doing7Dot1To7Dot5\doing7Dot1To7Dot5\obj\Debug\netcoreapp3.0\doing7Dot1To7Dot5.csprojAssemblyReference.cache
+C:\Users\Lucas\source\repos\schoolProject\doing7Dot1To7Dot5\doing7Dot1To7Dot5\obj\Debug\netcoreapp3.0\doing7Dot1To7Dot5.AssemblyInfoInputs.cache
+C:\Users\Lucas\source\repos\schoolProject\doing7Dot1To7Dot5\doing7Dot1To7Dot5\obj\Debug\netcoreapp3.0\doing7Dot1To7Dot5.AssemblyInfo.cs
+C:\Users\Lucas\source\repos\schoolProject\doing7Dot1To7Dot5\doing7Dot1To7Dot5\obj\Debug\netcoreapp3.0\doing7Dot1To7Dot5.dll
+C:\Users\Lucas\source\repos\schoolProject\doing7Dot1To7Dot5\doing7Dot1To7Dot5\obj\Debug\netcoreapp3.0\doing7Dot1To7Dot5.pdb

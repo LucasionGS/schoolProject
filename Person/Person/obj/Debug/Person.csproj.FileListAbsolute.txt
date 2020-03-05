@@ -1,0 +1,6 @@
+C:\Users\Lucas\source\repos\schoolProject\Person\Person\bin\Debug\Person.exe.config
+C:\Users\Lucas\source\repos\schoolProject\Person\Person\bin\Debug\Person.exe
+C:\Users\Lucas\source\repos\schoolProject\Person\Person\bin\Debug\Person.pdb
+C:\Users\Lucas\source\repos\schoolProject\Person\Person\obj\Debug\Person.csprojAssemblyReference.cache
+C:\Users\Lucas\source\repos\schoolProject\Person\Person\obj\Debug\Person.exe
+C:\Users\Lucas\source\repos\schoolProject\Person\Person\obj\Debug\Person.pdb

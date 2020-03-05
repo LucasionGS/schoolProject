@@ -1,0 +1,6 @@
+C:\Users\Lucas\source\repos\schoolProject\Read From File\Read From File\bin\Debug\Read From File.exe.config
+C:\Users\Lucas\source\repos\schoolProject\Read From File\Read From File\bin\Debug\Read From File.exe
+C:\Users\Lucas\source\repos\schoolProject\Read From File\Read From File\bin\Debug\Read From File.pdb
+C:\Users\Lucas\source\repos\schoolProject\Read From File\Read From File\obj\Debug\Read From File.csprojAssemblyReference.cache
+C:\Users\Lucas\source\repos\schoolProject\Read From File\Read From File\obj\Debug\Read From File.exe
+C:\Users\Lucas\source\repos\schoolProject\Read From File\Read From File\obj\Debug\Read From File.pdb

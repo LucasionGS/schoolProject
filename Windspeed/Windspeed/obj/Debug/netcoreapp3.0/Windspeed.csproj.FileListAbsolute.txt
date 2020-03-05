@@ -1,0 +1,10 @@
+C:\Users\Lucas\source\repos\schoolProject\Windspeed\Windspeed\bin\Debug\netcoreapp3.0\Windspeed.exe
+C:\Users\Lucas\source\repos\schoolProject\Windspeed\Windspeed\bin\Debug\netcoreapp3.0\Windspeed.deps.json
+C:\Users\Lucas\source\repos\schoolProject\Windspeed\Windspeed\bin\Debug\netcoreapp3.0\Windspeed.runtimeconfig.json
+C:\Users\Lucas\source\repos\schoolProject\Windspeed\Windspeed\bin\Debug\netcoreapp3.0\Windspeed.runtimeconfig.dev.json
+C:\Users\Lucas\source\repos\schoolProject\Windspeed\Windspeed\bin\Debug\netcoreapp3.0\Windspeed.dll
+C:\Users\Lucas\source\repos\schoolProject\Windspeed\Windspeed\bin\Debug\netcoreapp3.0\Windspeed.pdb
+C:\Users\Lucas\source\repos\schoolProject\Windspeed\Windspeed\obj\Debug\netcoreapp3.0\Windspeed.AssemblyInfoInputs.cache
+C:\Users\Lucas\source\repos\schoolProject\Windspeed\Windspeed\obj\Debug\netcoreapp3.0\Windspeed.AssemblyInfo.cs
+C:\Users\Lucas\source\repos\schoolProject\Windspeed\Windspeed\obj\Debug\netcoreapp3.0\Windspeed.dll
+C:\Users\Lucas\source\repos\schoolProject\Windspeed\Windspeed\obj\Debug\netcoreapp3.0\Windspeed.pdb

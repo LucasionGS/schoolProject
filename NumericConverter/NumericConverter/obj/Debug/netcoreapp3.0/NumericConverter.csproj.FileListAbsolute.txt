@@ -1,0 +1,11 @@
+C:\Users\Lucas\source\repos\schoolProject\NumericConverter\NumericConverter\bin\Debug\netcoreapp3.0\NumericConverter.exe
+C:\Users\Lucas\source\repos\schoolProject\NumericConverter\NumericConverter\bin\Debug\netcoreapp3.0\NumericConverter.deps.json
+C:\Users\Lucas\source\repos\schoolProject\NumericConverter\NumericConverter\bin\Debug\netcoreapp3.0\NumericConverter.runtimeconfig.json
+C:\Users\Lucas\source\repos\schoolProject\NumericConverter\NumericConverter\bin\Debug\netcoreapp3.0\NumericConverter.runtimeconfig.dev.json
+C:\Users\Lucas\source\repos\schoolProject\NumericConverter\NumericConverter\bin\Debug\netcoreapp3.0\NumericConverter.dll
+C:\Users\Lucas\source\repos\schoolProject\NumericConverter\NumericConverter\bin\Debug\netcoreapp3.0\NumericConverter.pdb
+C:\Users\Lucas\source\repos\schoolProject\NumericConverter\NumericConverter\obj\Debug\netcoreapp3.0\NumericConverter.csprojAssemblyReference.cache
+C:\Users\Lucas\source\repos\schoolProject\NumericConverter\NumericConverter\obj\Debug\netcoreapp3.0\NumericConverter.AssemblyInfoInputs.cache
+C:\Users\Lucas\source\repos\schoolProject\NumericConverter\NumericConverter\obj\Debug\netcoreapp3.0\NumericConverter.AssemblyInfo.cs
+C:\Users\Lucas\source\repos\schoolProject\NumericConverter\NumericConverter\obj\Debug\netcoreapp3.0\NumericConverter.dll
+C:\Users\Lucas\source\repos\schoolProject\NumericConverter\NumericConverter\obj\Debug\netcoreapp3.0\NumericConverter.pdb
