@@ -63,12 +63,17 @@ namespace SQLSimplification
         /// <param name="password"></param>
         /// <param name="db"></param>
         /// <returns></returns>
-        static SqlConnection Setup(string servername, string userid, string password, string db)
+        static SqlConnection Setup(string servername, string userid, string password, string db, bool integratedSecurity = true)
         {
             // This will only work for Windows Integrated users, I believe.
             try
             {
-                return new SqlConnection($"Data Source={servername};Initial Catalog={db};User ID={userid};Password={password}; Integrated Security=true");
+                string connectString = $"Data Source={servername};Initial Catalog={db};User ID={userid};Password={password};";
+                if (integratedSecurity == true)
+                {
+                    connectString += "Integrated Security=true";
+                }
+                return new SqlConnection(connectString);
             }
             catch (Exception e)
             {
