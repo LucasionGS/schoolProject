@@ -3,3 +3,8 @@ E:\Dev\schoolProject\SQLSimplification\SQLSimplification\bin\Debug\SQLSimplifica
 E:\Dev\schoolProject\SQLSimplification\SQLSimplification\bin\Debug\SQLSimplification.pdb
 E:\Dev\schoolProject\SQLSimplification\SQLSimplification\obj\Debug\SQLSimplification.dll
 E:\Dev\schoolProject\SQLSimplification\SQLSimplification\obj\Debug\SQLSimplification.pdb
+C:\Users\Lucas\source\repos\schoolProject\SQLSimplification\SQLSimplification\bin\Debug\SQLSimplification.dll
+C:\Users\Lucas\source\repos\schoolProject\SQLSimplification\SQLSimplification\bin\Debug\SQLSimplification.pdb
+C:\Users\Lucas\source\repos\schoolProject\SQLSimplification\SQLSimplification\obj\Debug\SQLSimplification.csprojAssemblyReference.cache
+C:\Users\Lucas\source\repos\schoolProject\SQLSimplification\SQLSimplification\obj\Debug\SQLSimplification.dll
+C:\Users\Lucas\source\repos\schoolProject\SQLSimplification\SQLSimplification\obj\Debug\SQLSimplification.pdb

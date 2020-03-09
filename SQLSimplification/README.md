@@ -59,6 +59,16 @@ QueryRequest.Close();
 // This is supposed to be used inside of a while loop with QueryRequest.Read().
 QueryRequest.Get(string columnName); // Returns Object
 QueryRequest.Get(int columnId); // Returns Object
+
+// These next two are practically identical to the two above.
+QueryRequest[string columnName]; // Returns Object
+QueryRequest[int columnId]; // Returns Object
+
+// You can also specify a type for the Get method.
 QueryRequest.Get<DataType>(string columnName); // Returns DataType
 QueryRequest.Get<DataType>(int columnId); // Returns DataType
+
+// These return the columns in the current query.
+string[] Columns; // Returns String[] including all the field names. 
+Dictionary<string, Type> Columns; // Returns Dictionary with field names as keys and their type as values.
 ```

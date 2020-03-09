@@ -14,10 +14,11 @@ namespace SQL_Testing
             MSSQL sql = new MSSQL("localhost", @"DESKTOP-63URI23\Lucas", "", "Kundekartotek");
             MSSQL.QueryRequest o = sql.Query(
                 "SELECT * FROM Kunder"
-                );
+            );
+
             while (o.Read())
             {
-                Console.WriteLine(o.Get("Kundenummer"));
+                //Console.WriteLine(o["Kundenummer"] + " - " + o[""]);
             }
 
             o.Close();

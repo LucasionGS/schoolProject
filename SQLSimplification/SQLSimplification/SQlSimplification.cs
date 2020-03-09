@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data.SqlClient;
 
 /// <summary>
@@ -98,6 +99,31 @@ namespace SQLSimplification
             }
 
             /// <summary>
+            /// Uses the Get function of this instance.
+            /// </summary>
+            /// <param name="columnName">Name of the column.</param>
+            /// <returns></returns>
+            public object this[string columnName] {
+                get
+                {
+                    return Get(columnName);
+                }
+            }
+
+            /// <summary>
+            /// Uses the Get function of this instance.
+            /// </summary>
+            /// <param name="columnId">Index of the column.</param>
+            /// <returns></returns>
+            public object this[int columnId]
+            {
+                get
+                {
+                    return Get(columnId);
+                }
+            }
+
+            /// <summary>
             /// Advances the SqlDataReader to the next record.
             /// Can be used inside of a while loop.
             /// </summary>
@@ -110,6 +136,32 @@ namespace SQLSimplification
             public void Close()
             {
                 dataReader.Close();
+            }
+
+            public string[] Columns
+            {
+                get
+                {
+                    List<string> data = new List<string>();
+                    for (int i = 0; i < dataReader.FieldCount; i++)
+                    {
+                        data.Add(dataReader.GetName(i));
+                    }
+                    return data.ToArray();
+                }
+            }
+
+            public Dictionary<string, Type> ColumnsAndValues
+            {
+                get
+                {
+                    Dictionary<string, Type> data = new Dictionary<string, Type>();
+                    for (int i = 0; i < dataReader.FieldCount; i++)
+                    {
+                        data.Add(dataReader.GetName(i), dataReader.GetFieldType(i));
+                    }
+                    return data;
+                }
             }
 
             /// <summary>
