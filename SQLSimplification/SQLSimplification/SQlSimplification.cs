@@ -36,9 +36,9 @@ namespace SQLSimplification
         /// <param name="password">User Password</param>
         /// <param name="db">Database name.</param>
         /// <param name="doNotOpenByDefault">Set to true if you don't want it to open on initialization, leave blank otherwise.</param>
-        public MSSQL(string servername, string userid, string password, string db, bool doNotOpenByDefault = false)
+        public MSSQL(string servername, string userid, string password, string db, bool integratedSecurity = true, bool doNotOpenByDefault = false)
         {
-            sqlConnection = Setup(servername, userid, password, db);
+            sqlConnection = Setup(servername, userid, password, db, integratedSecurity);
             if (!doNotOpenByDefault)
             {
                 Open();
