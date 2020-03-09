@@ -151,7 +151,7 @@ namespace SQLSimplification
                 }
             }
 
-            public Dictionary<string, Type> ColumnsAndValues
+            public Dictionary<string, Type> ColumnsAndTypes
             {
                 get
                 {
