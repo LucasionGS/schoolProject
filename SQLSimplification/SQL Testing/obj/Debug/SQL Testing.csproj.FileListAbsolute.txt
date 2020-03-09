@@ -7,3 +7,12 @@ E:\Dev\schoolProject\SQLSimplification\SQL Testing\obj\Debug\SQL Testing.csprojA
 E:\Dev\schoolProject\SQLSimplification\SQL Testing\obj\Debug\SQL Testing.csproj.CopyComplete
 E:\Dev\schoolProject\SQLSimplification\SQL Testing\obj\Debug\SQL Testing.exe
 E:\Dev\schoolProject\SQLSimplification\SQL Testing\obj\Debug\SQL Testing.pdb
+C:\Users\Lucas\source\repos\schoolProject\SQLSimplification\SQL Testing\bin\Debug\SQL Testing.exe.config
+C:\Users\Lucas\source\repos\schoolProject\SQLSimplification\SQL Testing\bin\Debug\SQL Testing.exe
+C:\Users\Lucas\source\repos\schoolProject\SQLSimplification\SQL Testing\bin\Debug\SQL Testing.pdb
+C:\Users\Lucas\source\repos\schoolProject\SQLSimplification\SQL Testing\bin\Debug\SQLSimplification.dll
+C:\Users\Lucas\source\repos\schoolProject\SQLSimplification\SQL Testing\bin\Debug\SQLSimplification.pdb
+C:\Users\Lucas\source\repos\schoolProject\SQLSimplification\SQL Testing\obj\Debug\SQL Testing.csprojAssemblyReference.cache
+C:\Users\Lucas\source\repos\schoolProject\SQLSimplification\SQL Testing\obj\Debug\SQL Testing.csproj.CopyComplete
+C:\Users\Lucas\source\repos\schoolProject\SQLSimplification\SQL Testing\obj\Debug\SQL Testing.exe
+C:\Users\Lucas\source\repos\schoolProject\SQLSimplification\SQL Testing\obj\Debug\SQL Testing.pdb

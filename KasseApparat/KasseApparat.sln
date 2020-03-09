@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29324.140
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KasseApparat", "KasseApparat\KasseApparat.csproj", "{F5409816-5710-4B0D-9ADF-DCDFB4F2020E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F5409816-5710-4B0D-9ADF-DCDFB4F2020E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5409816-5710-4B0D-9ADF-DCDFB4F2020E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5409816-5710-4B0D-9ADF-DCDFB4F2020E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5409816-5710-4B0D-9ADF-DCDFB4F2020E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1CEF7198-A873-417C-AF3A-BA77073D7A7B}
+	EndGlobalSection
+EndGlobal

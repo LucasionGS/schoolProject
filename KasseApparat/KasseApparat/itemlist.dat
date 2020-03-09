@@ -1,0 +1,5 @@
+# Format is (ID<int>, Item Name<string>, Price<int>, Discount<int>, if Discount is over 0: Amount to unlock discount<int>)
+1, Chocolate Bar, 10, 10, 5
+2, Juice, 8, 0
+3, Coffee, 15, 0
+4

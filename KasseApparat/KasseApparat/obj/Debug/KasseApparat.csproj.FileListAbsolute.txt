@@ -1,0 +1,6 @@
+C:\Users\Lucas\source\repos\schoolProject\KasseApparat\KasseApparat\bin\Debug\KasseApparat.exe.config
+C:\Users\Lucas\source\repos\schoolProject\KasseApparat\KasseApparat\bin\Debug\KasseApparat.exe
+C:\Users\Lucas\source\repos\schoolProject\KasseApparat\KasseApparat\bin\Debug\KasseApparat.pdb
+C:\Users\Lucas\source\repos\schoolProject\KasseApparat\KasseApparat\obj\Debug\KasseApparat.csprojAssemblyReference.cache
+C:\Users\Lucas\source\repos\schoolProject\KasseApparat\KasseApparat\obj\Debug\KasseApparat.exe
+C:\Users\Lucas\source\repos\schoolProject\KasseApparat\KasseApparat\obj\Debug\KasseApparat.pdb

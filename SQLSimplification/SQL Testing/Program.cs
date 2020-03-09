@@ -11,17 +11,17 @@ namespace SQL_Testing
     {
         static void Main(string[] args)
         {
-            MSSQL sql = new MSSQL("localhost", "LUCASION\\Lucasion", "", "test");
-            var o = sql.Query(
-                "UPDATE dat SET age = 69 WHERE name LIKE 'Jeff';" +
-                "SELECT * FROM dat"
+            MSSQL sql = new MSSQL("localhost", @"DESKTOP-63URI23\Lucas", "", "Kundekartotek");
+            MSSQL.QueryRequest o = sql.Query(
+                "SELECT * FROM Kunder"
                 );
-            while(o.Read())
+            while (o.Read())
             {
-                Console.WriteLine(o.Get<int>("age"));
+                Console.WriteLine(o.Get("Kundenummer"));
             }
 
             o.Close();
+
             Console.ReadKey();
         }
     }
