@@ -16,14 +16,16 @@ namespace SQL_Testing
                 "SELECT * FROM Kunder"
             );
 
-            /*for (int i = 0; i < o.Columns.Length; i++)
+            for (int i = 0; i < o.Columns.Length; i++)
             {
                 Console.WriteLine(o.Columns[i]);
-            }*/
-            while (o.Read())
+            }
+
+            while (o.Read()) for (int i = 0; i < o.Columns.Length; i++) Console.WriteLine(o[o.Columns[i]]);
+            /*while (o.Read())
             {
                 Console.WriteLine(o["Kundenummer"] + " - " + o["Firmanavn"] + " - " + o["Adresse"]);
-            }
+            }*/
 
             o.Close();
 
