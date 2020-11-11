@@ -99,8 +99,20 @@ namespace SQLSimplification
                 catch (Exception e)
                 {
                     Error(e.Message, e);
-                    throw new Exception(e.Message+"\nCould not finish query. The SQL syntax is likely incorrect or this query object already has an open query that needs closing with Close().");
+                    throw new Exception(e.Message + "\nCould not finish query. The SQL syntax is likely incorrect or this query object already has an open query that needs closing with Close().");
                 }
+            }
+
+            public Dictionary<string, object>[] GetData()
+            {
+                List<Dictionary<string, object>> list = new List<Dictionary<string, object>>();
+                int i = 0;
+                while (Read())
+                {
+                    list.Add(ColumnsValues());
+                }
+
+                return list.ToArray();
             }
 
             /// <summary>
@@ -143,30 +155,42 @@ namespace SQLSimplification
                 dataReader.Close();
             }
 
-            public string[] Columns
+            public string[] Columns()
             {
-                get
+                List<string> data = new List<string>();
+                for (int i = 0; i < dataReader.FieldCount; i++)
                 {
-                    List<string> data = new List<string>();
-                    for (int i = 0; i < dataReader.FieldCount; i++)
-                    {
-                        data.Add(dataReader.GetName(i));
-                    }
-                    return data.ToArray();
+                    data.Add(dataReader.GetName(i));
                 }
+                return data.ToArray();
             }
 
-            public Dictionary<string, Type> ColumnsAndTypes
+            /// <summary>
+            /// Returns all the Columns and types as Dictionary<string, Type>
+            /// </summary>
+            /// <returns></returns>
+            public Dictionary<string, Type> ColumnsTypes()
             {
-                get
+                Dictionary<string, Type> data = new Dictionary<string, Type>();
+                for (int i = 0; i < dataReader.FieldCount; i++)
                 {
-                    Dictionary<string, Type> data = new Dictionary<string, Type>();
-                    for (int i = 0; i < dataReader.FieldCount; i++)
-                    {
-                        data.Add(dataReader.GetName(i), dataReader.GetFieldType(i));
-                    }
-                    return data;
+                    data.Add(dataReader.GetName(i), dataReader.GetFieldType(i));
                 }
+                return data;
+            }
+
+            /// <summary>
+            /// Returns all the Columns and values as Dictionary<string, object>
+            /// </summary>
+            /// <returns></returns>
+            public Dictionary<string, object> ColumnsValues()
+            {
+                Dictionary<string, object> data = new Dictionary<string, object>();
+                for (int i = 0; i < dataReader.FieldCount; i++)
+                {
+                    data.Add(dataReader.GetName(i), Get(i));
+                }
+                return data;
             }
 
             /// <summary>
