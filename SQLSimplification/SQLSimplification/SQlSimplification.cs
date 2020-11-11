@@ -112,6 +112,8 @@ namespace SQLSimplification
                     list.Add(ColumnsValues());
                 }
 
+                Close();
+
                 return list.ToArray();
             }
 

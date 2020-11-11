@@ -51,31 +51,32 @@ The `QueryRequest Object` has instance methods and properties that you are going
 ```cs
 // Advances the SqlDataReader to the next record.
 
-QueryRequest queryRequest = sql.Query("SELECT...`");
+class QueryRequest {
+    // Advances to the next row in the data.
+    Read(): bool; // Returns true if it found another row, false otherwise.
 
-// Advances to the next row in the data.
-Read(): bool; // Returns true if it found another row, false otherwise.
+    // Closes the query request. Should always end with this after handling the data.
+    Close();
 
-// Closes the query request. Should always end with this after handling the data.
-Close();
+    // Get the value from a column in the current row as an object.
+    // This is supposed to be used inside of a while loop with queryRequest.Read().
+    Get(string columnName); // Returns the data with type object from the given name.
+    Get(int columnId); // Returns the data with type object from the given id.
 
-// Get the value from a column in the current row as an object.
-// This is supposed to be used inside of a while loop with queryRequest.Read().
-Get(string columnName); // Returns the data with type object from the given name.
-Get(int columnId); // Returns the data with type object from the given id.
+    // You can also specify a type for the Get method.
+    Get<DataType>(string columnName): DataType; // Returns the data with type DataType from the given name.
+    Get<DataType>(int columnId): DataType; // Returns the data with type DataType from the given id.
 
-// You can also specify a type for the Get method.
-Get<DataType>(string columnName): DataType; // Returns the data with type DataType from the given name.
-Get<DataType>(int columnId): DataType; // Returns the data with type DataType from the given id.
+    // You can use bracket notation as shorthand for the Get methods without custom types.
+    [string columnName]: object; // Returns the data with type object from the given name.
+    [int columnId]; object; // Returns the data with type object from the given id.
 
-// You can use bracket notation as shorthand for the Get methods without custom types.
-[string columnName]: object; // Returns the data with type object from the given name.
-[int columnId]; object; // Returns the data with type object from the given id.
+    // These return the columns in the current query.
+    Columns(): string[]; // Returns String[] including all the field names. 
+    ColumnsValues: Dictionary<string, object>; // Returns Dictionary with field names as keys and their value as values.
+    ColumnsTypes: Dictionary<string, Type>; // Returns Dictionary with field names as keys and their type as values.
 
-// These return the columns in the current query.
-Columns(): string[]; // Returns String[] including all the field names. 
-ColumnsValues: Dictionary<string, object>; // Returns Dictionary with field names as keys and their value as values.
-ColumnsTypes: Dictionary<string, Type>; // Returns Dictionary with field names as keys and their type as values.
+    GetData(): Dictionary<string, object>[]; // Returns every row with colomns and values as an array of Dictionary<string, object>
+}
 
-GetData
 ```
