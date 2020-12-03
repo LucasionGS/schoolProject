@@ -1,0 +1,139 @@
+:root {
+  --background-color: #1b1b1b;
+  --color: white;
+
+  --post-small-background-color: white;
+  --post-small-color: black;
+
+  --link: #ffa600;
+
+  --footer-background-color: #00087e;
+
+  --scrollbar-track-background-color: #3b3b3b;
+  --scrollbar-thumb-background-color: #2b2b2b;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  overflow-x: hidden;
+  background-color: var(--background-color);
+  color: var(--color);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body::-webkit-scrollbar {
+  width: 16px;
+  background-color: var(--scrollbar-track-background-color);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-thumb-background-color);
+}
+
+header {
+  width: 95vw;
+  margin: auto;
+  display: block;
+  border-bottom: solid 1px;
+  border-color: var(--color);
+}
+
+header nav {
+  width: 100%;
+}
+
+header nav {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
+header nav a {
+  color: var(--color);
+  text-decoration: none;
+}
+
+header nav a.active {
+  font-weight: bold;
+  color: var(--link)
+}
+
+#content {
+  display: block;
+  width: 95%;
+  margin: auto;
+}
+
+#postsContainer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  /* margin: auto; */
+}
+
+.postsLine {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.postSmall, .post {
+  display: flex;
+  flex-direction: column;
+  margin: 8px;
+  padding: 8px;
+  box-sizing: border-box;
+  width: 25vw;
+  height: 12.5vw;
+  background-color: var(--post-small-background-color);
+  color: var(--post-small-color);
+}
+
+.postContent .postSmallContent {
+  overflow-y: auto;
+}
+
+.postCredits .postSmallCredits {
+  border-top: solid 1px;
+  border-color: var(--background-color);
+}
+
+.post {
+  width: 80%;
+  height: unset;
+  transition: opacity 0.2s ease-in-out;
+  opacity: 0.5;
+}
+
+.post[open] {
+  opacity: 1;
+}
+
+.post .postContent {
+  height: 0px;
+  overflow: hidden;
+}
+
+.post[open] .postContent {
+  height: fit-content;
+}
+
+a.postAuthor {
+  color: var(--link);
+}
+
+footer {
+  display: flex;
+  min-height: 256px;
+  align-items: center;
+  padding: 0 16px;
+  background-color: var(--footer-background-color);
+}
+
+footer table {
+  table-layout: fixed;
+  width: 20%;
+}

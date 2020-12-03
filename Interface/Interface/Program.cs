@@ -10,7 +10,10 @@ namespace Interface
     {
         static void Main(string[] args)
         {
-
+            char[] s1 = "Hello".ToCharArray();
+            char[] s2 = s1;
+            Console.WriteLine(s1);
+            Console.ReadKey();
         }
 
         interface IDrawable
