@@ -70,8 +70,8 @@ namespace Api {
       credits.classList.add("postCredits");
       User.getUser(this.userId).then(user => {
         const p = document.createElement("p");
+        
         const author = document.createElement("a");
-
         author.innerText = user.name;
         author.classList.add("postAuthor");
         author.href = "/profile.html?id=" + user.id;
