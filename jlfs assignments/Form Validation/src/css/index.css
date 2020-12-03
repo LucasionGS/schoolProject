@@ -1,0 +1,33 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  font-size: 32px;
+}
+
+div#form {
+  border: solid 1px black;
+  padding: 16px;
+  width: 50%;
+}
+
+div.field {
+  display: flex;
+  justify-content: space-between;
+}
+
+input {
+  font-size: 32px;
+}
+
+#inputSend {
+  width: 100%;
+}

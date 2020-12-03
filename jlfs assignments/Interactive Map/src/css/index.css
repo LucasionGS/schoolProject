@@ -1,0 +1,63 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+#mapContainer {
+  position: relative;
+  width: 95%;
+  height: fit-content;
+  box-sizing: border-box;
+  padding: 16px;
+  border: solid black 1px;
+}
+
+#mapContainer img {
+  width: 100%;
+}
+
+#infobox {
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 16px;
+  width: 95%;
+  height: 64px;
+  box-sizing: border-box;
+  padding: 16px;
+  border: solid black 1px;
+
+  font-size: 24px;
+  text-align: center;
+}
+
+#infobox p {
+  transform: translateY(-75%);
+}
+
+.mappoint {
+  width: 32px;
+  height: 32px;
+  background-color: orange;
+  border: solid 4px lightgreen;
+  box-sizing: border-box;
+  position: absolute;
+}
+
+#mappoint1 {
+  /* Use of % is to perserve the position regardless of screen resolution. */
+  left: 42%;
+  top: 53%;
+}
+
+#mappoint2 {
+  left: 44%;
+  top: 68%;
+}

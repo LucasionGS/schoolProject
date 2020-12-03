@@ -1,0 +1,23 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.info {
+  width: 100%;
+  min-height: 64px;
+  text-align: center;
+  border: solid 1px;
+  box-sizing: border-box;
+  user-select: none;
+  margin: 16px;
+  padding: 8px;
+}

@@ -1,0 +1,42 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 300px;
+  margin: auto;
+  text-align: center;
+}
+
+#gallery {
+  width: 100%;
+  background-color: #000;
+  position: relative;
+  /* `px` not required when just resetting to 0 */
+  left: 0;
+  top: 0;
+}
+
+#buttonForward, #buttonBack {
+  cursor: pointer;
+  background-color: #fff;
+}
+
+#picture {
+  width: 100%;
+}
+
+#galleryThumbnails {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+#galleryThumbnails a {
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  margin-right: 10px;
+  float: left;
+  cursor: pointer;
+}
