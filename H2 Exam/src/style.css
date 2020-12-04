@@ -137,3 +137,65 @@ footer table {
   table-layout: fixed;
   width: 20%;
 }
+
+table#profileTable {
+  table-layout: fixed;
+  width: 95%;
+  margin: auto;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  border-collapse: collapse;
+}
+
+table#profileTable th, table#profileTable td {
+  border: solid 1px;
+}
+
+#contactContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  font-size: 32px;
+}
+
+div#form {
+  /* border: solid 1px black; */
+  padding: 16px;
+  width: 50%;
+  background-color: var(--background-color);
+  border: solid 1px;
+  border-color: var(--color);
+  font-size: 24px;
+}
+
+div#form div.field {
+  display: flex;
+  justify-content: space-between;
+}
+
+div#form label hint {
+  font-size: 12px;
+}
+
+div#form input, div#form textarea {
+  font-size: 24px;
+  width: 50%;
+}
+
+div#form textarea {
+  min-height: 128px;
+  height: 128px;
+}
+
+div#form #inputSend {
+  width: 100%;
+}
+
+div#form .inputErrorMessage {
+  text-align: right;
+  color: red;
+  font-size: 16px;
+}

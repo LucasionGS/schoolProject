@@ -142,14 +142,51 @@ var Api;
                 });
             });
         }
-        static getUser(userId) {
+        static getUser(userId, skipCache = false) {
             return __awaiter(this, void 0, void 0, function* () {
-                if (!this._cacheUsers) {
-                    console.log("Renewing cache...");
-                    yield User.getUsers();
+                if (!skipCache) {
+                    if (!this._cacheUsers) {
+                        console.log("Renewing cache...");
+                        yield User.getUsers();
+                    }
+                    return this._cacheUsers.find(u => u.id == userId);
                 }
-                return this._cacheUsers.find(u => u.id == userId);
+                else {
+                    return get("/users/" + userId).then(res => res.json())
+                        .then((userData) => {
+                        const user = new User(userData);
+                        return user;
+                    });
+                }
             });
+        }
+        createElement() {
+            const div = document.createElement("div");
+            div.classList.add("profileDisplay");
+            const content = document.createElement("div");
+            content.classList.add("profileContent");
+            function objectSections(object) {
+                const div = document.createElement("div");
+                for (const key in object) {
+                    const keyFormatted = (key.substring(0, 1).toUpperCase() + key.substring(1));
+                    const value = object[key];
+                    console.log(key + ": " + value);
+                    if (typeof value == "string") {
+                        const p = document.createElement("p");
+                        p.innerText = keyFormatted + " ------ " + value;
+                        div.appendChild(p);
+                    }
+                    else if (typeof value == "object") {
+                        const h3 = document.createElement("h3");
+                        h3.innerText = keyFormatted;
+                        div.appendChild(h3);
+                        div.appendChild(objectSections(value));
+                    }
+                }
+                return div;
+            }
+            div.appendChild(objectSections(this));
+            return div;
         }
     }
     Api.User = User;
