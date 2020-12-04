@@ -1,5 +1,5 @@
-addEventListener("load", () => {
-  Api.Post.getPosts()
+addEventListener("load", async () => {
+  const posts = await Api.Post.getPosts()
   .then(async posts => {
     const container = document.getElementById("postsContainer");
     let curLine: HTMLDivElement;
@@ -9,6 +9,17 @@ addEventListener("load", () => {
       curLine.classList.add("postsLine");
       container.appendChild(curLine);
       curLine.appendChild(post.createElement());
-    })
+    });
+
+    return posts;
+  });
+
+  // Search feature
+  const search = document.querySelector<HTMLInputElement>("#searchField input");
+  search.addEventListener("input", () => {
+    posts.forEach(post => {
+      let r = post.title.toLowerCase().includes(search.value.toLowerCase());
+      post.latestElement.style.display = r ? "" : "none";
+    });
   });
 });

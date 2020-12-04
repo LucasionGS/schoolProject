@@ -8,8 +8,8 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-addEventListener("load", () => {
-    Api.Post.getPosts()
+addEventListener("load", () => __awaiter(void 0, void 0, void 0, function* () {
+    const posts = yield Api.Post.getPosts()
         .then((posts) => __awaiter(void 0, void 0, void 0, function* () {
         const container = document.getElementById("postsContainer");
         let curLine;
@@ -20,5 +20,14 @@ addEventListener("load", () => {
             container.appendChild(curLine);
             curLine.appendChild(post.createElement());
         });
+        return posts;
     }));
-});
+    // Search feature
+    const search = document.querySelector("#searchField input");
+    search.addEventListener("input", () => {
+        posts.forEach(post => {
+            let r = post.title.toLowerCase().includes(search.value.toLowerCase());
+            post.latestElement.style.display = r ? "" : "none";
+        });
+    });
+}));
