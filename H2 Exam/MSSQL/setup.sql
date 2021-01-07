@@ -11,6 +11,7 @@ go
 use Movies
 GO
 
+
 IF EXISTS (SELECT * FROM movies.dbo.sysusers WHERE name = 'MovieProvider')
 BEGIN
   DROP USER [MovieProvider];
@@ -75,5 +76,12 @@ ALTER TABLE movies
 ADD FOREIGN KEY (genreId) references genres(id)
 
 -- SELECT * FROM movies WHERE [year] = (SELECT TOP (1) [year] from movies ORDER BY [year] ASC);
+
+ALTER ROLE [db_datawriter] ADD MEMBER [MovieProvider]
+GRANT INSERT ON OBJECT::dbo.movies TO MovieProvider
+
+ALTER ROLE [db_datawriter] ADD MEMBER [MovieManager]
+
+GO
 
 use master;

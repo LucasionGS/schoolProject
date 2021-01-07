@@ -1,0 +1,13 @@
+header {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+header div {
+  height: 1.5em;
+  flex: 1;
+}
+
+header a div {
+  height: 1.5em;
+}
