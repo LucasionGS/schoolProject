@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import React from "react";
 import "./Center.css";
 
 function Center(props: React.HtmlHTMLAttributes<HTMLSpanElement>) {

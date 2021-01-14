@@ -1,4 +1,6 @@
-import { baseUrl, Result, User, UserSQL } from "./models";
+import { config, Result, User, UserSQL } from "./models";
+
+const { baseLoginUrl } = config;
 
 type LoginCallback = (user: User) => void;
 
@@ -23,7 +25,7 @@ class Auth {
       body: formdata
     };
   
-    return fetch(baseUrl + "/src/authorize.php", requestOptions)
+    return fetch(baseLoginUrl + "/src/authorize.php", requestOptions)
       .then(response => response.json())
       .then((result: Result<UserSQL>) => {
         if (result.success) {
@@ -51,7 +53,7 @@ class Auth {
       body: formdata,
     };
   
-    return fetch(baseUrl + "/src/register.php", requestOptions)
+    return fetch(baseLoginUrl + "/src/register.php", requestOptions)
       .then(response => response.json())
       .then((result: Result<{ token: string }>) => {
         return result;

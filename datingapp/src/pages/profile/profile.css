@@ -1,0 +1,15 @@
+.profile_content {
+  display: flex;
+}
+
+#profile_infopanel {
+  width: 25%;
+  box-sizing: border-box;
+}
+
+#profile_details {
+  width: 75%;
+  padding: 0 32px;
+  box-sizing: border-box;
+  border-left: solid;
+}

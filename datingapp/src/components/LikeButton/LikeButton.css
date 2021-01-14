@@ -1,0 +1,13 @@
+div.likeButton {
+  width: 32px;
+  height: 32px;
+}
+
+div.likeButton img {
+  width: 100%;
+  height: 100%;
+}
+
+div.likeButton img:hover {
+  cursor: pointer;
+}

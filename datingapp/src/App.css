@@ -17,7 +17,7 @@ a:hover {
   text-decoration: underline;
 }
 
-input {
+input, button, textarea {
   font-size: 16px;
   background-color: #252a36;
   color: white;

@@ -1,0 +1,41 @@
+OOP Case: Dating - (Console Application)
+
+Der skal udarbejdes en Dating-applikation, som skal kunne følgende:
+
+1. oprette/slette en account/konto. (krav: brug stored procedure). - Kinda? Does Views count?
+
+2. logge ind og logge ud. (Krav: sql injection må ikke kunne ske). ✅
+
+3. oprette/slette profil: beskrive dig selv etc. (sletning: bare et felt det sættes til 1). ✅❌
+
+4. oprette/slette søgeprofil (hvad søger du; køn, højde, hårfarve etc.). (Krav: knap så meget et krav, men giver point :)
+
+5. foretage søgninger baseret på din søgeprofil eller ved hjælp af bokse/radio buttons etc. ✅
+
+6. Se resultat af søgninger. ✅
+
+7. kunne ’like’ en person, skrive til en person, samt se hvem, der har ’liked’ en selv. Bemærk: du kan kun skrive til en person hvis I har ’liked’ hinanden, - altså der skal være et match før du kan skrive til en anden person. Det er helt fint hvis korrespondancen foregår asynkront, dvs. skriv (indsætte række på tabel) læs (læs række på tabel). ✅
+
+8. Der skal være en Event på enten: ved like, ved match eller ved besked. ✅
+
+Krav til opgaven
+
+Det er ikke et krav at I opfylder alle punkter for at få 12. (Men det hjælper J )…
+
+Det er et krav at I arbejder med den objektorienterede tankegang, samt at I så vidt muligt kan tænke nogle af fagets målpinde ind i Jeres løsninger. Kan I ikke finde ideer til implementering af nogle af målpindene må I forberede Jer på, at I vil blive spurgt ind til målpindene alligevel… ✅
+
+Det er et krav, at der er udtænkt og brugt en database til løsning af opgaven. ✅
+
+Hvordan bliver jeg bedømt?
+
+Først og fremmest bliver I bedømt på hvad I kan!
+
+Der bliver dog også kigget på Jeres engagement og samarbejde.
+
+For at kunne give en mere korrekt bedømmelse af den enkelte elev, kan der, hvis nødvendigt, stilles afklarende spørgsmål eller der kan stilles en lille ekstra opgave.
+
+Fagets målpinde:
+
+11 Eleven kan skelne mellem override og overload af metoder. 12 Eleven kan begrunde valget af "access modifiers"/virkefelter.
+
+13 Eleven kan oprette og implementere et selvudviklet interface. 14 Eleven kan benytte funktion pointer/callback (Delegates). 15 Eleven kan udarbejde UML klassediagrammer. 16 Eleven kan designe en simpel domænemodel baseret på ’best practice’.

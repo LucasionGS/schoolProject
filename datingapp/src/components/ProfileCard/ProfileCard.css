@@ -1,0 +1,9 @@
+div.profileCard {
+  /* max-width: 100%; */
+  border: solid white 2px;
+}
+
+div.profileCard img.pfp {
+  width: 100%;
+  border-bottom: solid white 2px;
+}

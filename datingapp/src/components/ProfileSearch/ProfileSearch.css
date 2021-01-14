@@ -1,0 +1,19 @@
+div.profileSearch {
+  display: flex;
+  justify-content: center;
+}
+
+div.profileSearchItem {
+  display: flex;
+  margin: 8px;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+}
+
+div.profileContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}

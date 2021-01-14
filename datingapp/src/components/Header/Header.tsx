@@ -12,8 +12,15 @@ class Header extends React.Component<Props> {
     const menus: MenuItem[] = props.menuItems || [];
     
     this.menuElements = menus.map((v, i) => {
-      return (
+      if (typeof v.href == "string") return (
         <a href={v.href} key={i}>
+          <div>
+            {v.text}
+          </div>
+        </a>
+      );
+      else if (typeof v.href == "function") return (
+        <a href="javascript:void(0)" onClick={v.href} key={i}>
           <div>
             {v.text}
           </div>
@@ -41,7 +48,7 @@ export interface MenuItem {
   /**
    * URL to link to.
    */
-  href: string;
+  href: string | ((event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => void);
 }
 
 

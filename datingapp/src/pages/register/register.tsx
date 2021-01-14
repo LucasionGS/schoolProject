@@ -19,7 +19,7 @@ function P_Register() {
                     window.location.href = params.get("ref");
                   }
                   else {
-                    window.location.href = "/";
+                    window.location.href = "/profile/" + r.data.id;
                   }
                 }
               });

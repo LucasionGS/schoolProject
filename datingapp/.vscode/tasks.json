@@ -11,6 +11,12 @@
 				"kind": "build",
 				"isDefault": true
 			}
+		},
+		{
+			"label": "Compile and Run",
+			"type": "shell",
+			"command": "csc ${file} && ${fileBasenameNoExtension}.exe",
+			"problemMatcher": []
 		}
 	]
 }

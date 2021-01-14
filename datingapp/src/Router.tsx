@@ -4,15 +4,25 @@ import P_Index from "./pages/index/index";
 import P_Login from "./pages/login/login";
 import P_Register from "./pages/register/register";
 import P_Profiles from "./pages/profiles/profiles";
+import P_Profile from "./pages/profile/profile";
 
-function Router(props: {path: string, params: URLSearchParams}): JSX.Element {
+function Router(props: {path?: string, params: URLSearchParams}): JSX.Element {
   let {path} = props;
+
+  path || (path = window.location.pathname);
+
+  // Special cases
+  if (path.startsWith("/profile/")) {
+    return <P_Profile />;
+  }
+
+  // Route
   do {
     switch (path.replace(/\/\/+/g, "/")) {
-      case "/": return P_Index();
-      case "/login": return P_Login();
-      case "/register": return P_Register();
-      case "/profiles": return P_Profiles();
+      case "/": return (<P_Index />);
+      case "/login": return (<P_Login />);
+      case "/register": return (<P_Register />);
+      case "/profiles": return (<P_Profiles />);
     }
 
     path = path.substring(0, path.length - 1);
@@ -20,7 +30,7 @@ function Router(props: {path: string, params: URLSearchParams}): JSX.Element {
   }
   while (path.length > 0);
   // If nothing is found...
-  return P_Index();
+  return <P_Index />;
 }
 
 export default Router; // Export router

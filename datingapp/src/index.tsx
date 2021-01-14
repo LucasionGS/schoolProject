@@ -3,26 +3,9 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import Header, { MenuItem } from "./components/Header/Header";
-
-const headerMenus: MenuItem[] = [
-  {
-    text: "Home",
-    href: "/"
-  },
-  {
-    text: "Login",
-    href: "/login"
-  },
-  {
-    text: "Register",
-    href: "/register"
-  },
-];
 
 ReactDOM.render(
   <React.StrictMode>
-    <Header menuItems={headerMenus}/>
     <App/>
   </React.StrictMode>,
   document.getElementById('root')

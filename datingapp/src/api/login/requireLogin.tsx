@@ -1,7 +1,10 @@
 import { User } from "./models";
 
-function requireLogin() {
-  if (!User.currentUser) location.href = "/login?ref=" + location.pathname;
+// This is "technically" an overload.
+function requireLogin(): void;
+function requireLogin(force: boolean): void;
+function requireLogin(force?: boolean) {
+  if (force === true || !User.currentUser) window.location.href = "/login?ref=" + window.location.pathname;
 }
 
 export default requireLogin;

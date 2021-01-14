@@ -1,4 +1,9 @@
-export const baseUrl = "http://date.localhost:81";
+import React from "react";
+import { DateTools } from "../../Tools";
+
+export const config: typeof import("./config.json") = require("./config.json");
+console.log(config);
+const { baseLoginUrl } = config;
 
 export interface UserSQL {
   id: number,
@@ -10,7 +15,7 @@ export interface UserSQL {
 export interface ProfileSQL {
   id: number;
   fullName: string;
-  likedBy: string;
+  likes: number;
   pfp: string;
   bio: string;
   birthdate: {
@@ -18,8 +23,10 @@ export interface ProfileSQL {
     timezone: string;
     timezone_type: number;
   }
+  country: string;
   height: number;
   weight: number;
+  username: string;
 }
 
 export class Result<DataType = any>
@@ -50,45 +57,9 @@ export class User {
     public accessToken: string,
   ) { }
 
-  // static async authorize(token: string): Promise<Result<User>>;
-  // static async authorize(user: string, pass: string): Promise<Result<User>>;
-  // static async authorize(userOrToken: string, pass: string = null): Promise<Result<User>> {
-  //   var formdata = new FormData();
-  //   if (pass === null) {
-  //     formdata.append("token", userOrToken);
-  //   }
-  //   else {
-  //     formdata.append("username", userOrToken);
-  //     formdata.append("password", pass);
-  //   }
-
-  //   var requestOptions = {
-  //     method: 'POST',
-  //     body: formdata
-  //   };
-
-  //   return fetch(baseUrl + "/src/authorize.php", requestOptions)
-  //     .then(response => response.json())
-  //     .then((result: Result<UserSQL>) => {
-  //       if (result.success) {
-  //         let data: Result<User> = {
-  //           success: result.success,
-  //           data: User.mapToUser(result.data),
-  //           reason: result.reason
-  //         }
-  //         return data;
-  //       }
-  //       else {
-  //         let data: Result<User> = {
-  //           success: result.success,
-  //           data: null,
-  //           reason: result.reason
-  //         }
-  //         return data;
-  //       }
-  //     });
-  // }
-
+  /**
+   * Map a UserSQL object to a User instance
+   */
   public static mapToUser(data: UserSQL) {
     return new User(
       data.id,
@@ -112,6 +83,10 @@ export class User {
     localStorage.setItem("user", JSON.stringify(user));
   }
 
+  public static logout() {
+    window.localStorage.removeItem("user");
+  }
+
   /**
    * Get or set the current user.
    */
@@ -121,6 +96,7 @@ export class User {
     }
     return (this._curUsr = (localStorage.getItem("user") != null ? User.mapToUser(JSON.parse(localStorage.getItem("user"))) : null));
   }
+
   public static set currentUser(user) {
     User.setCurrentUser(user);
   }
@@ -130,57 +106,105 @@ export class User {
 
 export class Profile {
   constructor(
+    /**
+     * ID of the profile. Identical to ID of the user.
+     */
     public id: number,
     /**
      * The full name of the profile.
      */
     public fullName: string,
     /**
-     * A list of IDs of the users who liked this profile.
+     * Number of likes this profile has received.
      */
-    public likedBy: number[],
+    public likes: number,
     /**
      * Name of the profile picture. All profile pictures are stored in /img/pfp/
      */
     public pfp: string,
+    /**
+     * Biography text. The user-defined description.
+     */
     public bio: string,
+    /**
+     * Date of the user's birthday.
+     */
     public birthdate: Date,
+    /**
+     * User's country.
+     */
+    public country: string,
+    /**
+     * User's height
+     */
     public height: number,
+    /**
+     * User's weight
+     */
     public weight: number,
+    /**
+     * Username associated with this profile.
+     */
+    public username: string,
   ) { }
 
   public get age() {
-    return new Date().getFullYear() - this.birthdate.getFullYear();
+    let now = new Date();
+    let alive = new Date(now.getTime() - this.birthdate.getTime());
+    return alive.getFullYear() - 1970; // This returns correct year, also with day and month in mind.
+    // return new Date().getFullYear() - this.birthdate.getFullYear() - 1; // This worked terribly brrr
   }
 
-  public createInfoCard() {
-    const div = document.createElement("div");
-
-    div.classList.add("infocard");
-    const pfp = document.createElement("img");
-    pfp.src = this.pfp;
-
-    div.appendChild(pfp);
-
-    return div;
-  }
-
-  public static mapToProfile(data: ProfileSQL) {
-    const likedBy = data.likedBy.split(",").map(i => +i);
-    
+  /**
+   * Map a ProfileSQL object to a Profile instance
+   */
+  public static mapToProfile(data: ProfileSQL) {    
     var t = data.birthdate.date.split(/[- :]/) as unknown as number[];
-    const birthdate = new Date(Date.UTC(t[0], t[1]-1, t[2], t[3], t[4], t[5]));
+    const birthdate = new Date(Date.UTC(t[0], t[1] - 1, t[2], t[3], t[4], t[5]));
 
     return new Profile(
       data.id,
       data.fullName,
-      likedBy,
-      "/img/pfp/" + (data.pfp || "__default.png"),
+      data.likes,
+      baseLoginUrl + "/img/pfp/" + (data.pfp || "__default.png"),
       data.bio,
       birthdate,
+      data.country,
       data.height,
       data.weight,
+      data.username,
     );
+  }
+
+  public async updateProfile(): Promise<Result<null>> {
+    var formdata = new FormData();
+    var requestOptions = {
+      method: 'POST',
+      body: formdata
+    };
+    let user = User.currentUser;
+    if (!(user && user.id == this.id)) {
+      return new Result(false, "Logged in user not matching.");
+    }
+
+    formdata.append("token", user.accessToken);
+    for (const key in this) {
+      if (Object.prototype.hasOwnProperty.call(this, key)) {
+        const v = this[key];
+        formdata.append(key, v instanceof Date ? DateTools.dateToValue(v) : v + "");
+      }
+    }
+
+    formdata.forEach(v => {
+      console.log(v);
+    })
+    return fetch(baseLoginUrl + "/api/updateProfile.php", requestOptions)
+    .then(response => response.json())
+    .then((result: Result<null>) => {
+      console.log(result);
+      
+      return result;
+    });
   }
 
   public static async getProfile(username: string): Promise<Result<Profile>>;
@@ -197,7 +221,7 @@ export class Profile {
     if (Array.isArray(id)) formdata.append(key, id.join(","));
     else formdata.append(key, id.toString());
 
-    return fetch(baseUrl + "/api/getProfile.php", requestOptions)
+    return fetch(baseLoginUrl + "/api/getProfile.php", requestOptions)
     .then(response => response.json())
     .then((result: Result<ProfileSQL | ProfileSQL[]>) => {
       if (result.success) {
@@ -225,6 +249,54 @@ export class Profile {
       }
     });
   }
+
+  public async likedBy() {
+    var formdata = new FormData();
+    var requestOptions = {
+      method: 'POST',
+      body: formdata
+    };
+    formdata.append("id", this.id.toString());
+
+    return fetch(baseLoginUrl + "/api/likedBy.php", requestOptions)
+    .then(response => response.json())
+    .then((result: Result<ProfileSQL[]>) => {
+      if (result.success) {
+        let res = result.data.map(data => Profile.mapToProfile(data))
+        let data: Result<Profile[]> = {
+          success: result.success,
+          data: res,
+          reason: result.reason
+        }
+        return data;
+      }
+      else {
+        let data: Result<Profile[]> = result as any;
+        return data;
+      }
+    });
+  }
+
+  public async isLikedBy(id: number) {
+    return this.likedBy().then(res => res.data.some(p => p.id === id));
+  }
+
+  public async like(likerToken: string, state: boolean) {
+    var formdata = new FormData();
+    var requestOptions = {
+      method: 'POST',
+      body: formdata
+    };
+    formdata.append("token", likerToken);
+    formdata.append("id", this.id.toString());
+    formdata.append("state", state ? "1" : "0");
+
+    return fetch(baseLoginUrl + "/api/setLike.php", requestOptions)
+    .then(response => response.json())
+    .then((result: Result<boolean>) => {
+      return result;
+    });
+  }
     
   public static async searchProfiles(query: {
     minAge?: number;
@@ -248,7 +320,7 @@ export class Profile {
       }
     }
 
-    return fetch(baseUrl + "/api/searchProfiles.php", requestOptions)
+    return fetch(baseLoginUrl + "/api/searchProfiles.php", requestOptions)
     .then(response => response.json())
     .then((result: Result<ProfileSQL[]>) => {
       if (result.success) {
